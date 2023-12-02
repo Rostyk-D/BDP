@@ -188,7 +188,9 @@ def display_result(result):
 root = tk.Tk()
 root.title("Bicycle Processing")
 #іконка...
-icon_path = 'C:/Users/rosti/Downloads/bike-svgrepo-com.ico'
+documents_path = Path(os.path.expanduser('~')) / 'Documents'
+bicycle_data_path = documents_path / 'BDP'
+icon_path = bicycle_data_path / 'bike-svgrepo-com.ico'
 root.iconbitmap(default=icon_path)
 #довжина...
 label_lat = tk.Label(root, text="Latitude:")
