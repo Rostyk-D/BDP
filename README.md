@@ -12,10 +12,9 @@ some screenshots
 ![image](https://github.com/Rostyk-D/BDP/assets/115212316/9bdd55cd-5fbf-4a45-abed-02c673d715d8)
 ## NEW
 ADD Google map
-<img width="960" alt="image" src="https://github.com/Rostyk-D/BDP/assets/115212316/93f56a48-56fc-4b88-acd6-cdbcf8b4d76d"> 
+![image](https://github.com/Rostyk-D/BDP/assets/115212316/27dd3677-9dde-4097-a355-93232df1d80b)
 ADD New method to write get cordinates
-<img width="167" alt="image" src="https://github.com/Rostyk-D/BDP/assets/115212316/232d89f9-f71f-426b-bd1a-60c6fee1de12">
-
+![image](https://github.com/Rostyk-D/BDP/assets/115212316/06e2948e-fdd0-4663-9e94-d535f0952fd2)
 # Source code 
 write in terminal pip install pyinstaller
 and write pyinstaller --onefile main.py for compiling file to .exe
