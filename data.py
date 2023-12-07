@@ -8,37 +8,42 @@ cursor.execute('DROP TABLE IF EXISTS bicycle_parking')
 cursor.execute('DROP TABLE IF EXISTS bicycle_repair_shop')
 
 cursor.execute('''
-CREATE TABLE IF NOT EXISTS bicycle_paths (
-    id INTEGER PRIMARY KEY,
-    streets TEXT,
-    latitude REAL,
-    longitude REAL,
-    approximate_length REAL,
-    description TEXT
-)
+    CREATE TABLE IF NOT EXISTS bicycle_paths (
+        id INTEGER PRIMARY KEY,
+        streets TEXT,
+        latitude REAL,
+        longitude REAL,
+        approximate_length REAL,
+        description TEXT
+    )
 ''')
 
-
+# Створення таблиці bicycle_parking
 cursor.execute('''
-CREATE TABLE IF NOT EXISTS bicycle_parking (
-    id INTEGER PRIMARY KEY,
-    streets TEXT,
-    latitude REAL,
-    longitude REAL,
-    additional_parking INTEGER,
-    places INTEGER
-)
+    CREATE TABLE IF NOT EXISTS bicycle_parking (
+        id INTEGER PRIMARY KEY,
+        streets TEXT,
+        latitude REAL,
+        longitude REAL,
+        additional_parking INTEGER,
+        places INTEGER,
+        path_id INTEGER,
+        FOREIGN KEY (path_id) REFERENCES bicycle_paths(id)
+    )
 ''')
 
+# Створення таблиці bicycle_repair_shop
 cursor.execute('''
-CREATE TABLE IF NOT EXISTS bicycle_repair_shop (
-    id INTEGER PRIMARY KEY,
-    streets TEXT,
-    latitude REAL,
-    longitude REAL,
-    site TEXT,
-    description TEXT
-)
+    CREATE TABLE IF NOT EXISTS bicycle_repair_shop (
+        id INTEGER PRIMARY KEY,
+        streets TEXT,
+        latitude REAL,
+        longitude REAL,
+        site TEXT,
+        description TEXT,
+        path_id INTEGER,
+        FOREIGN KEY (path_id) REFERENCES bicycle_paths(id)
+    )
 ''')
 
 bicycle_paths_data = [
