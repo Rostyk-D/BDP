@@ -26,9 +26,7 @@ cursor.execute('''
         latitude REAL,
         longitude REAL,
         additional_parking INTEGER,
-        places INTEGER,
-        path_id INTEGER,
-        FOREIGN KEY (path_id) REFERENCES bicycle_paths(id)
+        places INTEGER
     )
 ''')
 
@@ -40,9 +38,7 @@ cursor.execute('''
         latitude REAL,
         longitude REAL,
         site TEXT,
-        description TEXT,
-        path_id INTEGER,
-        FOREIGN KEY (path_id) REFERENCES bicycle_paths(id)
+        description TEXT
     )
 ''')
 
